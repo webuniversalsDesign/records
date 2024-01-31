@@ -16,6 +16,7 @@ app.listen(PORT, () => {
 })
 
 app.get('/', (req, res) => {
+
     UserModel.find({})
         .then(users => res.json(users))
         .catch(err => res.json(err))
